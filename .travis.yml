@@ -1,0 +1,14 @@
+language: python
+
+python:
+     - "2.7"
+
+script:
+    - python Filters/parser.py
+    
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: master    
